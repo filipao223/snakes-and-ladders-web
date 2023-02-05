@@ -1,0 +1,11 @@
+.main_board {
+    background-image: url("src/assets/board.png");
+    background-size: cover;
+    height: 800px;
+    width: 800px;
+}
+
+.player_pos {
+    height: 800px;
+    width: 800px;
+}

@@ -1,0 +1,17 @@
+<div class="main_board">
+    <svg class="player_pos" xmlns="http://www.w3.org/2000/svg">
+        <g *ngFor="let player of playerList; let i = index">
+            <!-- -> cx attribute is calculated by first checking if player is on an odd row, if yes
+                 -> cy attribute is calculated by first checking if player is on first row, if yes, then place it on hardcoded 740px position, otherwise
+                        module of 10 gives us the column number and we multiply by 80 to get the proper coordinate
+
+                -->
+            <circle 
+                [attr.cx]="player.position/10/2 == 0 || player.position <= 10 ? player.position%10*80 - 20 : 820 - player.position%10*80"
+                [attr.cy]="player.position <= 10 ? 740 : 800-player.position/10*80 - 20" 
+                r="10" 
+                [attr.fill]="player.color" 
+                />
+        </g>
+    </svg>
+</div>
