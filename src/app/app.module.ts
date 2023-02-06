@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import { PlayerListComponent } from './components/player-list/player-list.component';
 import { RollComponent } from './components/roll/roll.component';
+import { WinConditionComponent } from './components/win-condition/win-condition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
     PlayerListComponent,
-    RollComponent
+    RollComponent,
+    WinConditionComponent
   ],
   imports: [
     BrowserModule,

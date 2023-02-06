@@ -14,14 +14,19 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Details
+Some details about the implementation:
+ - Board component: 
+        The board component is responsible for the drawing of the board and its pieces, to represent the players I draw a circle using embedded SVG elements in the component, chaning the coordinates according to the positions of each player we receive from the backend.
+ - Player List component:
+        This component is responsible for representing the player names and their current positions.
+ - Roll component:
+        This component is responsible for calling the backend API using two buttons, new game and roll dice.
+ - Win Condition component:
+        This component is responsible for showing which player won the game by checking a message queue, which will be populated if any of the players has reached position 100.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Issues yet to be resolved:
+    - Player names and count is hardcoded, we could have a new component with Input fields to save the player names
+    - Currently, player 1 always moves twice on the first roll.
+    - The pieces on the board sometimes appear in the wrong position
+    - There's a lack of feedback on the roll count
